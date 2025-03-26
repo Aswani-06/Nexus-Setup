@@ -1,0 +1,30 @@
+Installation on Nexus in Amazon linux
+
+Nexus default port number as 8081
+
+1) create Amazon linux server(Instance type"t2 medium" and AMI is "Kernal-5.10")
+2) sudo -i
+3) yum install java  -y
+4)cd /opt
+5) wget https://download.sonatype.com/nexus/3/nexus-3.70.0-03-java17-unix.tar.gz ---> 3.70.0-03 version
+6) tar -xvzf give the tar file 
+7) mv untar file name nexus 
+8)cd nexus/
+9)cd bin/
+10) vim nexus.vmoptions
+11)edis first two lines AS XMS lines put 1024 in both xms lines in b/w double quotes.
+12)copy /sonatype-work/nexus3/log -->copy the entire line 
+13) cd .. -->To come out from nexus directory
+14)ll
+15)add one user as nexus (adduser nexus)
+16)id nexus -->To check the user weather created/not.
+17)passwd nexus -->give password and confirm password
+18)chown -R nexus:nexus nexus -->To chane permissions
+19) chown -R nexus:nexus sonatype-work
+20)cd nexus & cd bin
+21)sh nexus status -->To check nexus status
+22) sh nexus start -->To start nexus.
+
+23) click sign in
+ user name admi 
+ password copy the link and go to instance give that path using cat you will get password.
